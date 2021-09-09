@@ -21,7 +21,7 @@ require('../bd/connexionDB.php');
   }
 
 
-  if(isset($_GET['id'])){
+  if(!isset($_GET['id'])){
     header('Location: manage-admin.php'); 
     exit;
   }
