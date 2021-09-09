@@ -4,7 +4,21 @@ require('../bd/connexionDB.php');
  
     ini_set('display_errors', '-1');
 
- 
+        
+    if (!isset($_SESSION['id'])){
+        header('Location: index.php'); 
+        exit;
+    }
+
+    if (!isset($_SESSION['SP'])){
+        header('Location: index.php'); 
+        exit;
+    }
+
+    if ($_SESSION['SP'] != 1){
+        header('Location: index.php'); 
+        exit;
+    }
 
 
 
@@ -116,7 +130,7 @@ require('../bd/connexionDB.php');
             <div class="mb-3">
 
                 <select class="form-control" name="adminselect" required>
-                    <option value="" disabled ><?php if(isset($mail)){ echo $mail; }else{ echo $afficher_admin['SP'];}?></option>
+                    <option value="" disabled ><?php if($afficher_admin['SP'] == 0){echo 'Admin';}elseif($afficher_admin['SP'] == 1){echo 'Super-Admin';}?></option>
                     <option value="0">Admin</option>
                     <option value="1">Super-Admin</option>
                     
