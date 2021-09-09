@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
+    require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
 
     ini_set('display_errors', '-1');
