@@ -80,7 +80,7 @@ if ($_SESSION['SP'] != 1){
 
             <td><?= $aa['firstname'] ?></td>
 
-            <td><a href="voir_profil.php?id=<?= $aa['id'] ?>">Aller au profil</a></td>
+            <td><a href="modify-admin.php?id=<?= $aa['id'] ?>">Aller au profil</a></td>
 
           </tr>
 
