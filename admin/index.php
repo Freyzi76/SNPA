@@ -64,7 +64,7 @@ ini_set('display_errors', '1');
 
             <a href="add-admin.php">Gerez Les Administrateur</a>
             <br>
-            <a href="manage-admmin.php">Gerez Les Administrateur</a>
+            <a href="manage-admin.php">Gerez Les Administrateur</a>
             <br>
 
 

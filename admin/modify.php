@@ -6,20 +6,10 @@
         header('Location: index.php');
         exit;
     }
-
-    if (!isset($_SESSION['SP'])){
-        header('Location: index.php'); 
-        exit;
-    }
-
-    if ($_SESSION['SP'] === 1){
-        header('Location: index.php'); 
-        exit;
-    }
  
     // On récupère les informations de l'utilisateur connecté
     $afficher_profil = $DB->query("SELECT * 
-        FROM tadmin 
+        FROM utilisateur 
         WHERE id = ?",
         array($_SESSION['id']));
     $afficher_profil = $afficher_profil->fetch();
@@ -53,7 +43,7 @@
  
             }else{
                 $req_mail = $DB->query("SELECT mail 
-                    FROM tadmin 
+                    FROM utilisateur 
                     WHERE mail = ?",
                     array($mail));
                 $req_mail = $req_mail->fetch();
@@ -66,7 +56,7 @@
  
             if ($valid){
  
-                $DB->insert("UPDATE tadmin SET firstname = ?, lastname = ?, mail = ? 
+                $DB->insert("UPDATE utilisateur SET prenom = ?, nom = ?, mail = ? 
                     WHERE id = ?", 
                     array($prenom, $nom,$mail, $_SESSION['id']));
  
