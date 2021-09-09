@@ -76,9 +76,9 @@ if ($_SESSION['SP'] != 1){
 
           <tr>          
 
-            <td><?= $aa['nom'] ?></td>
+            <td><?= $aa['lastname'] ?></td>
 
-            <td><?= $aa['prenom'] ?></td>
+            <td><?= $aa['firstname'] ?></td>
 
             <td><a href="voir_profil.php?id=<?= $aa['id'] ?>">Aller au profil</a></td>
 
