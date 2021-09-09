@@ -19,11 +19,20 @@ require('../bd/connexionDB.php');
       header('Location: index.php'); 
       exit;
   }
+
+
+  if(isset($_GET['id'])){
+    header('Location: manage-admin.php'); 
+    exit;
+  }
+
+
+
     // On récupère les informations de l'utilisateur connecté
     $afficher_admin = $DB->query("SELECT * 
         FROM tadmin 
         WHERE id = ?",
-        array($_SESSION['id']));
+        array($_GET['id']));
     $afficher_admin = $afficher_admin->fetch();
  
     if(!empty($_POST)){
@@ -54,24 +63,17 @@ require('../bd/connexionDB.php');
                 $valid = false;
                 $er_mail = "Le mail n'est pas valide";
  
-            }else{
-                $req_mail = $DB->query("SELECT mail 
-                    FROM utilisateur 
-                    WHERE mail = ?",
-                    array($mail));
-                $req_mail = $req_mail->fetch();
- 
-                if ($req_mail['mail'] <> "" && $_SESSION['mail'] != $req_mail['mail']){
-                    $valid = false;
-                    $er_mail = "Ce mail existe déjà";
-                }
+            
+            }elseif($req_mail['mail'] <> "" && $afficher_admin['mail'] != $req_mail['mail']){
+                $valid = false;
+                $er_mail = "Ce mail existe déjà";
             }
  
             if ($valid){
  
                 $DB->insert("UPDATE utilisateur SET firstname = ?, lastname = ?, mail = ?, SP = ?
                     WHERE id = ?", 
-                    array($prenom, $nom,$mail, $adminselect, $_SESSION['id']));
+                    array($prenom, $nom,$mail, $adminselect, $_GET['id']));
 
  
                 header('Location:  profil.php');
