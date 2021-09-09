@@ -5,7 +5,7 @@
 
     ini_set('display_errors', '-1');
  
-    /*
+    
     
     if (isset($_SESSION['id'])){
         header('Location: index.php'); 
@@ -20,7 +20,7 @@
     if ($_SESSION['SP'] === 1){
         header('Location: index.php'); 
         exit;
-    }*/
+    }
  
     // Si la variable "$_Post" contient des informations alors on les traitres
     if(!empty($_POST)){
