@@ -102,6 +102,8 @@ ini_set('display_errors', '-1');
 
                 $_SESSION['id'] = $req['id']; // id de l'utilisateur unique 
                 $_SESSION['SP'] = $req['SP'];
+                $_SESSION['lastname'] = $req['lastname']; // id de l'utilisateur unique 
+                $_SESSION['firstname'] = $req['firstname'];
 
 
  

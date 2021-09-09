@@ -60,6 +60,8 @@ ini_set('display_errors', '1');
 
           if($_SESSION['SP'] == 1) {
 
+            echo $_SESSION['id'];
+
             ?>
 
             <a href="add-admin.php">Gerez Les Administrateur</a>
@@ -67,7 +69,7 @@ ini_set('display_errors', '1');
             <a href="manage-admin.php">Gerez Les Administrateur</a>
             <br>
 
-            
+           
 
 
             <?php

@@ -9,6 +9,7 @@ require('../bd/connexionDB.php');
         header('Location: index.php'); 
         exit;
     }
+    /*
 
     if (!isset($_SESSION['SP'])){
         header('Location: index.php'); 
@@ -18,7 +19,7 @@ require('../bd/connexionDB.php');
     if ($_SESSION['SP'] != 1){
         header('Location: index.php'); 
         exit;
-    }
+    }*/
 
 
 
