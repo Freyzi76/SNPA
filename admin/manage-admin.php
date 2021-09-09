@@ -3,30 +3,22 @@
     include('bd/connexionDB.php');
  
     if (!isset($_SESSION['id'])){
-<<<<<<< HEAD
-        header('Location: index.php');
-=======
         header('Location: ../index.php');
->>>>>>> master
         exit;
     }
 
     if (!isset($_SESSION['SP'])){
-<<<<<<< HEAD
         header('Location: index.php'); 
         exit;
     }
 
     if ($_SESSION['SP'] === 1){
-        header('Location: index.php'); 
-=======
         header('Location: ../admin/index.php'); 
         exit;
     }
 
     if ($_SESSION['SP'] !== 1){
         header('Location: ../admin/index.php'); 
->>>>>>> master
         exit;
     }
  
@@ -87,11 +79,7 @@
                 $_SESSION['prenom'] = $prenom;
                 $_SESSION['mail'] = $mail;
  
-<<<<<<< HEAD
-                header('Location:  profil.php');
-=======
                 header('Location: ../admin/index.php');
->>>>>>> master
                 exit;
             }   
         }
