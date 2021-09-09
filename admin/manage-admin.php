@@ -54,7 +54,7 @@ if ($_SESSION['SP'] != 1){
 
   <body>      
 
-    <div>Utilisateurs</div>
+    <div>Administrateur</div>
 
     <table>
 

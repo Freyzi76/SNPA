@@ -1,18 +1,30 @@
 <?php
-    session_start();
-    include('bd/connexionDB.php');
+
+require('../bd/connexionDB.php');
+ 
+    ini_set('display_errors', '-1');
+
  
     if (!isset($_SESSION['id'])){
-        header('Location: index.php');
-        exit;
-    }
- 
+      header('Location: index.php'); 
+      exit;
+  }
+  
+  if (!isset($_SESSION['SP'])){
+      header('Location: index.php'); 
+      exit;
+  }
+  
+  if ($_SESSION['SP'] != 1){
+      header('Location: index.php'); 
+      exit;
+  }
     // On récupère les informations de l'utilisateur connecté
-    $afficher_profil = $DB->query("SELECT * 
-        FROM utilisateur 
+    $afficher_admin = $DB->query("SELECT * 
+        FROM tadmin 
         WHERE id = ?",
         array($_SESSION['id']));
-    $afficher_profil = $afficher_profil->fetch();
+    $afficher_admin = $afficher_admin->fetch();
  
     if(!empty($_POST)){
         extract($_POST);
@@ -22,6 +34,7 @@
             $nom = htmlentities(trim($nom));
             $prenom = htmlentities(trim($prenom));
             $mail = htmlentities(strtolower(trim($mail)));
+            $adminselect = htmlentities(trim($adminselect));
  
             if(empty($nom)){
                 $valid = false;
@@ -56,13 +69,10 @@
  
             if ($valid){
  
-                $DB->insert("UPDATE utilisateur SET prenom = ?, nom = ?, mail = ? 
+                $DB->insert("UPDATE utilisateur SET firstname = ?, lastname = ?, mail = ?, SP = ?
                     WHERE id = ?", 
-                    array($prenom, $nom,$mail, $_SESSION['id']));
- 
-                $_SESSION['nom'] = $nom;
-                $_SESSION['prenom'] = $prenom;
-                $_SESSION['mail'] = $mail;
+                    array($prenom, $nom,$mail, $adminselect, $_SESSION['id']));
+
  
                 header('Location:  profil.php');
                 exit;
@@ -90,7 +100,11 @@
                 <?php   
                 }
             ?>
-            <input type="text" placeholder="Votre nom" name="nom" value="<?php if(isset($nom)){ echo $nom; }else{ echo $afficher_profil['nom'];}?>" required>   
+
+
+            <input type="text" placeholder="Votre nom" name="nom" value="<?php if(isset($nom)){ echo $nom; }else{ echo $afficher_admin['lastname'];}?>" required>  
+            
+            
             <?php
                 if (isset($er_prenom)){
                 ?>
@@ -98,7 +112,11 @@
                 <?php   
                 }
             ?>
-            <input type="text" placeholder="Votre prénom" name="prenom" value="<?php if(isset($prenom)){ echo $prenom; }else{ echo $afficher_profil['prenom'];}?>" required>   
+
+
+            <input type="text" placeholder="Votre prénom" name="prenom" value="<?php if(isset($prenom)){ echo $prenom; }else{ echo $afficher_admin['firstname'];}?>" required>   
+
+
             <?php
                 if (isset($er_mail)){
                 ?>
@@ -106,7 +124,26 @@
                 <?php   
                 }
             ?>
-            <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }else{ echo $afficher_profil['mail'];}?>" required>
+
+
+
+            <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }else{ echo $afficher_admin['mail'];}?>" required>
+
+
+
+            <div class="mb-3">
+
+                <select class="form-control" name="adminselect" required>
+                    <option value="" disabled >Select Admin</option>
+                    <option value="0">Admin</option>
+                    <option value="1">Super-Admin</option>
+                    
+                </select>
+
+            </div> 
+
+
+
             <button type="submit" name="modification">Modifier</button>
         </form>
     </body>
