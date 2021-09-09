@@ -62,7 +62,7 @@ require('../bd/connexionDB.php');
  
             if ($valid){
  
-                $DB->insert("UPDATE utilisateur SET firstname = ?, lastname = ?, mail = ?, SP = ?
+                $DB->insert("UPDATE tadmin SET firstname = ?, lastname = ?, mail = ?, SP = ?
                     WHERE id = ?", 
                     array($prenom, $nom,$mail, $adminselect, $_GET['id']));
 
