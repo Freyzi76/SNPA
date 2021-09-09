@@ -1,7 +1,5 @@
 <?php
 
-ini_set('display_errors', '1');
-
   // Permet de savoir s'il y a une session. 
 
   // C'est-à-dire si un utilisateur s'est connecté à votre site 

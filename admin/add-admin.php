@@ -2,10 +2,6 @@
     session_start();
     require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
-
-    ini_set('display_errors', '-1');
- 
-    
     
     if (!isset($_SESSION['id'])){
         header('Location: index.php'); 
