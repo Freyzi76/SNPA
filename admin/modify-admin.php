@@ -28,7 +28,7 @@ require('../bd/connexionDB.php');
 
 
 
-    // On récupère les informations de l'utilisateur connecté
+    // On récupère les informations
     $afficher_admin = $DB->query("SELECT * 
         FROM tadmin 
         WHERE id = ?",
@@ -136,7 +136,7 @@ require('../bd/connexionDB.php');
             <div class="mb-3">
 
                 <select class="form-control" name="adminselect" required>
-                    <option value="" disabled >Select Admin</option>
+                    <option value="" disabled ><?php if(isset($mail)){ echo $mail; }else{ echo $afficher_admin['SP'];}?></option>
                     <option value="0">Admin</option>
                     <option value="1">Super-Admin</option>
                     
