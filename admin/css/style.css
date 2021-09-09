@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.formcontainer {
+    border-radius: 5px;
+    margin-top: 1px;
+    padding-bottom: 10px;
+    max-width: 98%;
+}
+
+.btn-formulaire-add {
+    margin-left: 70%;
+}
