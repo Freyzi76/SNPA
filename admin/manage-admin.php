@@ -12,11 +12,6 @@
         exit;
     }
 
-    if ($_SESSION['SP'] === 1){
-        header('Location: ../admin/index.php'); 
-        exit;
-    }
-
     if ($_SESSION['SP'] !== 1){
         header('Location: ../admin/index.php'); 
         exit;
