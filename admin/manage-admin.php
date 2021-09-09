@@ -66,7 +66,9 @@ if ($_SESSION['SP'] != 1){
 
         <th>Prénom</th>
 
-        <th>Grerez cet Administrateur</th>
+        <th>Super-Admin</th>
+
+        <th>Profil Administrateur</th>
 
       </tr>
 
@@ -82,7 +84,9 @@ if ($_SESSION['SP'] != 1){
 
             <td><?= $aa['firstname'] ?></td>
 
-            <td><a href="../admin/modify-admin.php?id=<?= $aa['id'] ?>">Aller au profil</a></td>
+            <td><?php if($aa['SP'] == 0){echo 'NON';}elseif($aa['SP'] == 1){echo 'OUI';}?></td>
+
+            <td><a href="../admin/modify-admin.php?id=<?= $aa['id'] ?>">Modifier cet Administrateur</a></td>
 
           </tr>
 
