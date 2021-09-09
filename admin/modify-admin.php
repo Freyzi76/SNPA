@@ -4,12 +4,6 @@ require('../bd/connexionDB.php');
  
     ini_set('display_errors', '-1');
 
-        
-    if (!isset($_SESSION['id'])){
-        header('Location: index.php'); 
-        exit;
-    }
-    /*
 
     if (!isset($_SESSION['SP'])){
         header('Location: index.php'); 
@@ -19,7 +13,7 @@ require('../bd/connexionDB.php');
     if ($_SESSION['SP'] != 1){
         header('Location: index.php'); 
         exit;
-    }*/
+    }
 
 
 
