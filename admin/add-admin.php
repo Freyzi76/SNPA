@@ -7,7 +7,7 @@
  
     
     
-    if (isset($_SESSION['id'])){
+    if (!isset($_SESSION['id'])){
         header('Location: index.php'); 
         exit;
     }
@@ -17,7 +17,7 @@
         exit;
     }
 
-    if ($_SESSION['SP'] === 1){
+    if ($_SESSION['SP'] != 1){
         header('Location: index.php'); 
         exit;
     }
