@@ -13,6 +13,8 @@
 <body>
 
 <p> je me mets a jour avec un script depuis putty mon proprio est heureux :)<p>
+
+<button class="btn btn-warning " onclick="location.href='hugo-marc.xyz/admin';">ADMIN</button>
   
 </body>
 </html>
