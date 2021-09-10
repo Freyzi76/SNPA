@@ -148,7 +148,7 @@ if ($_SESSION['SP'] != 1){
 
 
 
-            <button type="submit" name="modification">Modifier</button>
+            <button class="btn btn-primary btn-formulaire-add" type="submit" name="modification">Modifier</button>
         </form>
     </body>
 </html>

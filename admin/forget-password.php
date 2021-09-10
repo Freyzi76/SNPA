@@ -3,6 +3,7 @@
     require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
     ini_set('display_errors', '-1');
+    error_reporting( E_ALL );
 
     
     if (isset($_SESSION['id'])){
@@ -43,7 +44,8 @@
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$confirmationhbibicheiuheichoiehcoheihciehcoehchik$");
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
- 
+                        
+                        $from = "contact@hugo.marc.xyz"
                         $objet = 'Nouveau mot de passe';
                         $to = $verification_mail['mail'];
  
@@ -62,12 +64,12 @@
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
-                        mail($to, $objet, $contenu, $header);
+                        mail($from, $to, $objet, $contenu, $header);
                         $DB->insert("UPDATE tadmin SET pw = ?, n_pw = 1 WHERE mail = ?", 
                             array($new_pass_crypt, $verification_mail['mail']));
                     }   
                 }       
-                //header('Location: index.php');
+                //header('Location: ../admin/index.php');
                 exit;
             }
         }
@@ -106,7 +108,7 @@
             <div class="mb-3"> 
             <label class="form-label">Email</label>
             <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
-            <button type="submit" name="forgotPassword">Envoyer</button>
+            <button class="btn btn-primary btn-formulaire-add" type="submit" name="forgotPassword">Envoyer</button>
         </form>
     </body>
 </html>
