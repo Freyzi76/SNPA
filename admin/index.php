@@ -62,7 +62,7 @@
 
             ?>
 
-            <a href="add-admin.php">Gerez Les Administrateur</a>
+            <a href="add-admin.php">Ajouter un Administrateur</a>
             <br>
             <a href="manage-admin.php">Gerez Les Administrateur</a>
             <br>
