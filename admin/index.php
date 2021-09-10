@@ -44,9 +44,9 @@
 
     <div class="container-fluid ">
 
-      <a href="admin/login.php" class="btn btn-primary">Connexion</a>
+      <a href="../admin/login.php" class="btn btn-primary">Connexion</a>
 
-      <a href="admin/forget-password.php" class="btn btn-secondary">Mot de passe oublié</a>
+      <a href="../admin/forget-password.php" class="btn btn-secondary">Mot de passe oublié</a>
 
     </div>
 
