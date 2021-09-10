@@ -30,13 +30,13 @@
             }
  
             if($valid){
-                $verification_mail = $DB->query("SELECT firstname, lastname, mail, pw 
+                $verification_mail = $DB->query("SELECT firstname, lastname, mail, n_pw 
                     FROM tadmin WHERE mail = ?",
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
  
                 if(isset($verification_mail['mail'])){
-                    if($verification_mail['pw'] == 0){
+                    if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
  
@@ -57,13 +57,13 @@
                         //===== Contenu de votre message
                         $contenu =  "<html>".
                             "<body>".
-                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$verification_mail['nom']."</b>,</p><br/>".
+                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$verification_mail['lastname']."</b>,</p><br/>".
                             "<p style='text-align: justify'><i><b>Nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-                        $DB->insert("UPDATE tadmin SET mdp = ?, pw = 1 WHERE mail = ?", 
+                        $DB->insert("UPDATE tadmin SET pw = ?, n_pw = 1 WHERE mail = ?", 
                             array($new_pass_crypt, $verification_mail['mail']));
                     }   
                 }       
