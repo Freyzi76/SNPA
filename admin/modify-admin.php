@@ -1,22 +1,22 @@
 <?php
-
-require('../bd/connexionDB.php');
-
-
-    session_start();
+session_start();
+require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
 
-    if (!isset($_SESSION['SP'])){
-        header('Location: index.php'); 
-        exit;
-    }
+if (!isset($_SESSION['id'])){
+    header('Location: index.php'); 
+    exit;
+}
 
-    if ($_SESSION['SP'] != 1){
-        header('Location: index.php'); 
-        exit;
-    }
+if (!isset($_SESSION['SP'])){
+    header('Location: index.php'); 
+    exit;
+}
 
-
+if ($_SESSION['SP'] != 1){
+    header('Location: index.php'); 
+    exit;
+}
 
     // On récupère les informations
     $afficher_admin = $DB->query("SELECT * 
@@ -93,9 +93,10 @@ require('../bd/connexionDB.php');
                 }
             ?>
 
-
-            <input type="text" placeholder="Votre nom" name="nom" value="<?php if(isset($nom)){ echo $nom; }else{ echo $afficher_admin['lastname'];}?>" required>  
-            
+            <div class="mb-3"> 
+            <label class="form-label">Nom</label>
+            <input class="form-control" type="text" placeholder="Votre nom" name="nom" value="<?php if(isset($nom)){ echo $nom; }else{ echo $afficher_admin['lastname'];}?>" required>  
+            </div>
             
             <?php
                 if (isset($er_prenom)){
@@ -125,7 +126,7 @@ require('../bd/connexionDB.php');
 
             <div class="mb-3">
 
-                <select class="form-control" name="adminselect" required>
+                <select class="form-control" name="adminselect" class="form-select" required>
                     <option value="" disabled ><?php if($afficher_admin['SP'] == 0){echo 'Admin';}elseif($afficher_admin['SP'] == 1){echo 'Super-Admin';}?></option>
                     <option value="0">Admin</option>
                     <option value="1">Super-Admin</option>

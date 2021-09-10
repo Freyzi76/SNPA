@@ -1,9 +1,9 @@
 <?php
+session_start();
+require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
-require('../bd/connexionDB.php');
 
- 
-  if (!isset($_SESSION['id'])){
+if (!isset($_SESSION['id'])){
     header('Location: index.php'); 
     exit;
 }
@@ -16,9 +16,7 @@ if (!isset($_SESSION['SP'])){
 if ($_SESSION['SP'] != 1){
     header('Location: index.php'); 
     exit;
-}
-
-  
+}  
 
   // On récupère tous les utilisateurs sauf l'utilisateur en cours
 
