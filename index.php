@@ -14,7 +14,7 @@
 
 <p> je me mets a jour avec un script depuis putty mon proprio est heureux :)<p>
 
-<button class="btn btn-warning " onclick="location.href='hugo-marc.xyz/admin';">ADMIN</button>
+<button class="btn btn-warning " onclick="location.href='/admin';">ADMIN</button>
   
 </body>
 </html>
