@@ -65,7 +65,7 @@
                             array($new_pass_crypt, $verification_mail['mail']));
                     }   
                 }       
-                header('Location: connexion.php');
+                header('Location: index.php');
                 exit;
             }
         }
