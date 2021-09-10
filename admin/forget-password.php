@@ -39,7 +39,7 @@
                 if(isset($verification_mail['mail'])){
                     if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
-                        $new_pass = rand(10, 15);
+                        $new_pass = "default";
  
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$confirmationhbibicheiuheichoiehcoheihciehcoehchik$");
