@@ -80,7 +80,15 @@ if ($_SESSION['SP'] != 1){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Modifier votre profil</title>
+
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../Admin/css/style.css">
+
     </head>
     <body>      
         <div>Modification</div>
@@ -106,9 +114,10 @@ if ($_SESSION['SP'] != 1){
                 }
             ?>
 
-
-            <input type="text" placeholder="Votre prénom" name="prenom" value="<?php if(isset($prenom)){ echo $prenom; }else{ echo $afficher_admin['firstname'];}?>" required>   
-
+            <div class="mb-3"> 
+            <label class="form-label">Prénom</label>
+            <input class="form-control" type="text" placeholder="Votre prénom" name="prenom" value="<?php if(isset($prenom)){ echo $prenom; }else{ echo $afficher_admin['firstname'];}?>" required>   
+            </div>
 
             <?php
                 if (isset($er_mail)){
@@ -120,8 +129,10 @@ if ($_SESSION['SP'] != 1){
 
 
 
-            <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }else{ echo $afficher_admin['mail'];}?>" required>
-
+            <div class="mb-3"> 
+            <label class="form-label">Prénom</label>
+            <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }else{ echo $afficher_admin['mail'];}?>" required>
+            </div>
 
 
             <div class="mb-3">
