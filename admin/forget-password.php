@@ -3,6 +3,7 @@
     require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
     ini_set('display_errors', '-1');
+    error_reporting( E_ALL );
 
     
     if (isset($_SESSION['id'])){
@@ -44,7 +45,7 @@
                         $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$confirmationhbibicheiuheichoiehcoheihciehcoehchik$");
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
                         
-                        $from = "contact@hugo.marc.xyz"
+                        $from = "contact@hugo.marc.xyz";
                         $objet = 'Nouveau mot de passe';
                         $to = $verification_mail['mail'];
  
