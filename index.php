@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<p> hello word <p>
+<p> je me mets a jour avec un script depuis putty mon proprio est heureux :)<p>
   
 </body>
 </html>
