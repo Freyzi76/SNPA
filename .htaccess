@@ -1,10 +1,14 @@
+Options +FollowSymlinks -MultiViews
+
+RewriteEngine on
+
+RewriteBase /
+
+
 <files .htaccess>
 order allow,deny
 deny from all
 </files> 
-
-
-Options All –Indexes
 
 
 RedirectMatch 403 ^/.git/?$
