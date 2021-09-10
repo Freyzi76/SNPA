@@ -4,6 +4,8 @@ RewriteEngine on
 
 RewriteBase /
 
+Deny from  all
+
 
 <files .htaccess>
 order allow,deny
