@@ -1,4 +1,4 @@
-
+<?php
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -44,5 +44,4 @@ if(!$mail->send()){
     echo "Message sent!";
 }
 
-exit;
 
