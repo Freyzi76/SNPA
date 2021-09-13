@@ -23,7 +23,7 @@
  
         if (isset($_POST['forgotPassword'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
-            $MDP = htmlentities(strtolower(trim($MSP)));
+            $MDP = htmlentities(strtolower(trim($MDP)));
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
