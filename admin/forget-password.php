@@ -20,9 +20,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require '../PHPMAiler/src/Exception.php';
-    require '../PHPMAiler/src/PHPMailer.php';
-    require '../PHPMAiler/src/SMTP.php';
+    require '../../PHPMAiler/src/Exception.php';
+    require '../../PHPMAiler/src/PHPMailer.php';
+    require '../../PHPMAiler/src/SMTP.php';
 
  
     if(!empty($_POST)){
