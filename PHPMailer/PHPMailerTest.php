@@ -39,6 +39,8 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
+                var_dump($verification_mail);
+
                 echo 'test';
  
                 if(isset($verification_mail['mail'])){
