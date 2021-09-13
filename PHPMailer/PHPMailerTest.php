@@ -39,13 +39,14 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
-
+                echo 'test';
  
                 if(isset($verification_mail['mail'])){
                     if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = "defaultPassword";
  
+                        echo 'test2';
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = password_hash($new_pass, PASSWORD_DEFAULT);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
@@ -54,6 +55,8 @@
                         $objet = 'Nouveau mot de passe';
                         $to = $verification_mail['mail'];
  
+                        echo 'test3';
+
                         //===== Création du header du mail.
                         $header = 'From: "Hugo-marc.xyz" <no-reply@test.com> \n';
                         $header .= "Reply-To: ". $to ."\r\n";
@@ -71,7 +74,7 @@
                         //===== Envoi du mail
                         
 
-
+                        echo 'test4';
 
 
                             $smtpUsername = 'hmarc@normandiewebschool.fr';
