@@ -26,7 +26,7 @@
             $smtpPassword = trim($smtpPassword);
 
 
-            var_dump($MDP);
+            var_dump($smtpPassword);
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
