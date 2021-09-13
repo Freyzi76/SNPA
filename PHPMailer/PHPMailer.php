@@ -17,8 +17,8 @@ $smtpPassword = 'MDPtestSENDmailWITHPHPMAILERtest76*/*';
 $emailFrom ='hmarc@normandiewebschool.fr';
 $emailFromName = 'Hugo MARC';
 
-$emailTo = 'hugo.marc76113@gmail.com';
-$emailToName = 'TEST';
+$emailTo = 'n.vareille@normandiewebschool.fr';
+$emailToName = 'Nicolas Vareille';
 
 
 $mail = new PHPMailer;
@@ -35,8 +35,8 @@ $mail->Password = $smtpPassword;
 
 $mail->setFrom($emailFrom, $emailFromName);
 $mail->addAddress($emailTo, $emailToName);
-$mail->Subject = 'PHPMailer GMail SMTP test';
-$mail->msgHTML("test body"); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
+$mail->Subject = 'PHPMailer GMail SMTP';
+$mail->msgHTML("Hey Nicolas, voila PHPMailer ajouter sans composer les cours php POO ça aide"); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = 'HTML messaging not supported';
 // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
 
