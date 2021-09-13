@@ -14,7 +14,7 @@ require 'src/SMTP.php';
 $smtpUsername = 'hmarc@normandiewebschool.fr';
 $smtpPassword = 'MDPtestSENDmailWITHPHPMAILERtest76*/*';
 
-$emailFrom ='contact@hugo-marc.xyz';
+$emailFrom ='hmarc@normandiewebschool.fr';
 $emailFromName = 'Hugo MARC';
 
 $emailTo = 'hugo.marc76113@gmail.com';
