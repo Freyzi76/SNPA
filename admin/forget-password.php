@@ -20,9 +20,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'src/Exception.php';
-    require 'src/PHPMailer.php';
-    require 'src/SMTP.php';
+    require '../PHPMAiler/src/Exception.php';
+    require '../PHPMAiler/src/PHPMailer.php';
+    require '../PHPMAiler/src/SMTP.php';
 
  
     if(!empty($_POST)){
@@ -47,7 +47,7 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
-                
+
  
                 if(isset($verification_mail['mail'])){
                     if($verification_mail['n_pw'] == 0){
