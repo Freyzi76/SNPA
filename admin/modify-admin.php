@@ -66,7 +66,7 @@ if ($_SESSION['SP'] != 1){
                     array($prenom, $nom,$mail, $adminselect, $_GET['id']));
 
  
-                header('Location:  profil.php');
+                header('Location:  /admin');
                 exit;
             }   
         }
