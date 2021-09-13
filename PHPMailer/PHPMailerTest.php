@@ -69,10 +69,7 @@
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
-                        /*
-                        mail($from, $to, $objet, $contenu, $header);
-                        $DB->insert("UPDATE tadmin SET pw = ?, n_pw = 1 WHERE mail = ?", 
-                            array($new_pass_crypt, $verification_mail['mail']));*/
+                        
 
 
 
