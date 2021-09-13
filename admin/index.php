@@ -58,8 +58,6 @@
 
           if($_SESSION['SP'] == 1) {
 
-            echo $_SESSION['id'];
-
             ?>
 
             <a href="add-admin.php">Ajouter un Administrateur</a>
