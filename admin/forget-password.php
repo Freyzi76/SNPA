@@ -23,7 +23,7 @@
  
         if (isset($_POST['forgotPassword'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
- 
+            $MDP = htmlentities(strtolower(trim($MSP)));
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
@@ -35,6 +35,8 @@
                     FROM tadmin WHERE mail = ?",
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
+
+                require '../../PHPMailer/PHPMailer.php'
  
                 if(isset($verification_mail['mail'])){
                     if($verification_mail['n_pw'] == 0){
@@ -106,8 +108,15 @@
             ?>
 
             <div class="mb-3"> 
-            <label class="form-label">Email</label>
-            <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+            </div>
+
+            <div class="mb-3"> 
+                <label class="form-label">MDP</label>
+                <input class="form-control" type="password" placeholder="MDP" name="DMP" value="" required>
+            </div>
+            
             <button class="btn btn-primary btn-formulaire-add" type="submit" name="forgotPassword">Envoyer</button>
         </form>
     </body>

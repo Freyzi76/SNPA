@@ -12,13 +12,13 @@ require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 
 $smtpUsername = 'hmarc@normandiewebschool.fr';
-$smtpPassword = 'MDPtestSENDmailWITHPHPMAILERtest76*/*';
+$smtpPassword = $MDP;
 
 $emailFrom ='hmarc@normandiewebschool.fr';
 $emailFromName = 'Hugo MARC';
 
-$emailTo = 'n.vareille@normandiewebschool.fr';
-$emailToName = 'Nicolas Vareille';
+$emailTo = 'hugo.marc76113@gmail.com';
+$emailToName = 'TEST test';
 
 
 $mail = new PHPMailer;
