@@ -44,6 +44,9 @@
                 echo 'test';
  
                 if(isset($verification_mail['mail'])){
+
+                    $verification_mail['n_pw'] = 0;
+
                     if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = "defaultPassword";
