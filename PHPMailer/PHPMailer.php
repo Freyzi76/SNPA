@@ -1,7 +1,5 @@
 <?php
 
-var_dump($MDP);
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -47,4 +45,4 @@ if(!$mail->send()){
 }
 
 exit;
-?>
+
