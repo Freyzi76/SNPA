@@ -36,7 +36,7 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
-                require '../../PHPMailer/PHPMailer.php'
+                require '../PHPMailer/PHPMailer.php';
  
                 if(isset($verification_mail['mail'])){
                     if($verification_mail['n_pw'] == 0){
