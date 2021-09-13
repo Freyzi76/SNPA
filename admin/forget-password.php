@@ -50,8 +50,8 @@
                         $to = $verification_mail['mail'];
  
                         //===== Création du header du mail.
-                        $header = "From: NOM_DE_LA_PERSONNE <no-reply@test.com> \n";
-                        $header .= "Reply-To: ".$to."\n";
+                        $header = 'From: "Hugo-marc.xyz" <no-reply@test.com> \n';
+                        $header .= "Reply-To: ". $to ."\r\n";
                         $header .= "MIME-version: 1.0\n";
                         $header .= "Content-type: text/html; charset=utf-8\n";
                         $header .= "Content-Transfer-Encoding: 8bit";
