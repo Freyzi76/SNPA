@@ -23,7 +23,7 @@
  
         if (isset($_POST['forgotPassword'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
-            $smtpPassword = trim($MDP);
+            $smtpPassword = trim($smtpPassword);
 
 
             var_dump($MDP);

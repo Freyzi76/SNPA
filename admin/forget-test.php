@@ -37,7 +37,7 @@ require ('../PHPMailer/PHPMailerTest.php');
 
             <div class="mb-3"> 
                 <label class="form-label">MDP</label>
-                <input class="form-control" type="password" placeholder="MDP" name="DMP" value="" required>
+                <input class="form-control" type="password" placeholder="Mot de passe" name="smtpPassword" value="" required>
             </div>
             
             <button class="btn btn-primary btn-formulaire-add" type="submit" name="forgotPassword">Envoyer</button>
