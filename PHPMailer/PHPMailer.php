@@ -93,7 +93,8 @@
                             $mail->AltBody = 'HTML messaging not supported';
                             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
                             
-                          
+                            header('Location: ../admin/index.php');
+                            exit;
 
                     }   
                 }       
