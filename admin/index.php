@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', '-1');
+error_reporting( E_ALL );
   // Permet de savoir s'il y a une session. 
 
   // C'est-à-dire si un utilisateur s'est connecté à votre site 
