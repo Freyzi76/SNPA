@@ -33,8 +33,11 @@ error_reporting( E_ALL );
 
     <?= require('templates/Header.php'); ?>
 
+    <main>
+
     <?= require('pages/index.php'); ?>
 
+    </main>
     
 
   </body>
