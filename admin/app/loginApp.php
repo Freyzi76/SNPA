@@ -71,7 +71,7 @@
 
                 $valid = false;
 
-                $er_mail = "Le mail ou le mot de passe est incorrecte";
+                $er_mail = "Les informations son incorrecte";
 
             }
 
