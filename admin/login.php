@@ -64,7 +64,7 @@
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, crypt($mdp, "$6$rounds=5000$confirmationhbibicheiuheichoiehcoheihciehcoehchik$")));
+                array($mail, password_verify($mdp, PASSWORD_DEFAULT)));
 
             $req = $req->fetch();
 
