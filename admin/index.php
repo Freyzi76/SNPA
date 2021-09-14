@@ -1,7 +1,7 @@
 <?php
 
-ini_set('display_errors', '-1');
-error_reporting( E_ALL );
+//ini_set('display_errors', '-1');
+//error_reporting( E_ALL );
 
   session_start(); 
 
@@ -33,11 +33,11 @@ error_reporting( E_ALL );
 
   <body>
 
-    <?= require('templates/Header.php'); ?>
+    <?php require('templates/Header.php'); ?>
 
     <main>
 
-    <?= require('pages/' . $content . '.php'); ?>
+    <?php require('pages/' . $content . '.php'); ?>
 
     </main>
     
