@@ -1,11 +1,6 @@
+
+
 <header class="p-3 bg-dark text-white">
-
-<?php
-
-if(!isset($_SESSION['id'])) { // Si on ne détecte pas de session alors on verra les liens ci-dessous
-
-?>
-
 
 </div>
 
@@ -53,5 +48,7 @@ if(!isset($_SESSION['id'])) { // Si on ne détecte pas de session alors on verra
         }
 
         ?>
+
+    </div>
 
 </header>
