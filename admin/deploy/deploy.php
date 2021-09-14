@@ -8,6 +8,6 @@ error_reporting( E_ALL );
 echo 'test1';
 $output = shell_exec('cd /home/hugo76113');
 echo "<pre>$output</pre>";
-$output2 = shell_exec('ls');
+$output = shell_exec('ls');
 echo "<pre>$output</pre>";
 ?>
