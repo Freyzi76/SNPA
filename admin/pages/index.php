@@ -1,6 +1,6 @@
 <?php
 
-    if(!isset($_SESSION['id'])) {  
+    if(isset($_SESSION['id'])) {  
 
         if($_SESSION['SP'] == 1) {
 
