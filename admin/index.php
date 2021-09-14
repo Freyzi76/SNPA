@@ -37,7 +37,7 @@ error_reporting( E_ALL );
 
     <main>
 
-    <?= require('pages/' . $content . 'php'); ?>
+    <?= require('pages/' . $content . '.php'); ?>
 
     </main>
     
