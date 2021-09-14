@@ -47,15 +47,7 @@
                 </div>
 
 
-                <div class="checkbox mb-3">
-
-                    <label>
-
-                        <input type="checkbox" value="remember-me"> Remember me
-
-                    </label>
-                    
-                </div>
+                <br>
 
 
                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="connexion">Se connecter</button>
