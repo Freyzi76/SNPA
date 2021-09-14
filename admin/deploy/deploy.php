@@ -1,9 +1,4 @@
 
-<form action="shellExecTest.php" method="post">
-commande shell <input type="text" name="command">
-<input type="submit">
-</form>
-
 <?php
 
 ini_set('display_errors', '-1');
@@ -15,3 +10,11 @@ echo shell_exec($command);
 echo "</pre>";
 
 ?>
+
+
+<form action="shellExecTest.php" method="post">
+commande shell <input type="text" name="command">
+<input type="submit">
+</form>
+
+
