@@ -1,7 +1,7 @@
 
 <div class="text-center">
     
-    <div class="form-signin" style="width: 200px;">
+    <div class="form-signin" style="width: 300px;">
 
         <form method="post" class="container-fluid formcontainer">
 
