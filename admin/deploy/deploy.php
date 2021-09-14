@@ -9,7 +9,7 @@ echo "<pre>";
 echo shell_exec($command);
 echo "</pre>";
 
-shell_exec('sh script.sh');
+shell_exec(' ./script.sh');
 
 
 ?>
