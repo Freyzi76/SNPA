@@ -3,11 +3,11 @@
 ini_set('display_errors', '-1');
 error_reporting( E_ALL );
 
+  session_start(); 
+
   // Fichier PHP contenant la connexion à votre BDD
 
   require('../bd/connexionDB.php'); 
-
-  session_start(); 
 
 ?>
 
@@ -31,7 +31,7 @@ error_reporting( E_ALL );
 
   <body>
 
-    <?= require('../bd/connexionDB.php'); ?>
+    <?= require('/templates/Header.php'); ?>
 
     <?php
 
