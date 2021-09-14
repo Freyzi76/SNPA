@@ -59,7 +59,7 @@
                         var_dump($new_pass_crypt);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
 
-                        $DB->insert("UPDATE tadmin SET pw = ?, n_mdp = 1 WHERE mail = ?", 
+                        $DB->insert("UPDATE tadmin SET pw = ?, n_pw = 1 WHERE mail = ?", 
                             array($new_pass_crypt, $verification_mail['mail']));
  
                         //===== Contenu de votre message
