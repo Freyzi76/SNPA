@@ -5,7 +5,7 @@
 
         <form method="post" class="container-fluid formcontainer">
 
-
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <?php
             if (isset($er_mail)){
@@ -18,11 +18,11 @@
             ?>
 
 
-                <div class="mb-3"> 
+                <div class="form-floating">
                     
-                    <label class="form-label">Email</label>
-                    
-                    <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+                    <input class="form-control" type="email" id="Email" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+
+                    <label for="Email">Email</label>
                 
                 </div>
 
@@ -38,13 +38,16 @@
             }
             ?>
 
-                <div class="mb-3"> 
-                    <label class="form-label">Email</label>
+                <div class="form-floating"> 
                     
-                    <input class="form-control" type="password" placeholder="Mot de passe" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+                    <input class="form-control" type="password" id="Password" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
 
-                    <button class="btn btn-primary " type="submit" name="connexion">Se connecter</button>
+                    <label for="Password">Mot de Passe</label>
+
                 </div>
+
+
+                <button class="w-100 btn btn-lg btn-primary" type="submit" name="connexion">Se connecter</button>
 
 
         </form>
