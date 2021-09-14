@@ -10,4 +10,7 @@ $output = shell_exec('cd /home/hugo76113');
 echo "<pre>$output</pre>";
 $output = shell_exec('ls');
 echo "<pre>$output</pre>";
+
+$output = shell_exec('script.sh');
+echo "<pre>$output</pre>";
 ?>
