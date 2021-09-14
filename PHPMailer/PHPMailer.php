@@ -2,9 +2,6 @@
     session_start();
     require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
-    ini_set('display_errors', '-1');
-    error_reporting( E_ALL );
-
     
     if (isset($_SESSION['id'])){
         header('Location: index.php'); 
@@ -51,7 +48,7 @@
 
                     if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
-                        $new_pass = "defaultPassword";
+                        $new_pass = rand();
  
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");;
