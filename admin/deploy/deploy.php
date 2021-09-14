@@ -11,6 +11,6 @@ echo "<pre>$output</pre>";
 $output = shell_exec('ls');
 echo "<pre>$output</pre>";
 
-$output = shell_exec('script.sh');
+$output = shell_exec('sudo script.sh');
 echo "<pre>$output</pre>";
 ?>
