@@ -34,20 +34,22 @@
 
                         <ul class="dropdown-menu" aria-labelledby="dropdown04">
 
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
 
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
 
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
 
                         </ul>
-                        
+                        </li>
+                        </ul>
                         <form>
                         
-                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        
                         </form>
-                    
+                    </div>
+                </div>
             <div>
 
     </div>
