@@ -54,21 +54,9 @@
 
             }
 
-            var_dump(password_verify($mdp, PASSWORD_DEFAULT));
 
             // On fait une requête pour savoir si le couple mail / mot de passe existe bien car le mail est unique !
 
-            $test = $DB->query("SELECT * 
-
-            FROM tadmin
-
-            WHERE mail = ? AND pw = ?",
-
-            array($mail, $pw));
-
-            $test = $test->fetch();
-
-            var_dump($test);
 
             $req = $DB->query("SELECT * 
 
@@ -76,7 +64,7 @@
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, password_verify($mdp, PASSWORD_DEFAULT, $test['pw'])));
+                array($mail, crypt($msp, "$6$rounds=5000$macleapersonnaliseretagardersecret$")));
 
             $req = $req->fetch();
 
