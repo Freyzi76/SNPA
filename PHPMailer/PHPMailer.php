@@ -55,6 +55,8 @@
  
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = password_hash($new_pass, PASSWORD_DEFAULT);
+
+                        var_dump($new_pass_crypt);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
 
 
@@ -77,7 +79,7 @@
                             
                             $mail = new PHPMailer;
                             $mail->isSMTP(); 
-                            $mail->SMTPDebug = 2; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
+                            $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
                             
                             $mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
                             $mail->Port = 587; // TLS only
