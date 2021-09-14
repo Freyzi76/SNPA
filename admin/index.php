@@ -37,7 +37,9 @@
 
     <main>
 
-    <?php require('pages/' . $content . '.php'); ?>
+      <br>
+
+        <?php require('pages/' . $content . '.php'); ?>
 
     </main>
     
