@@ -31,7 +31,7 @@ error_reporting( E_ALL );
 
   <body>
 
-    <?= require('/templates/Header.php'); ?>
+    <?= require('templates/Header.php'); ?>
 
     <?php
 
