@@ -64,7 +64,7 @@
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, crypt($mdp, "$6$rounds=5000$macleapersonnaliseretagardersecret$")));
+                array($mail, crypt($mdp, "$6$rounds=5000$MEGAsecretKEY765325dqz6d2d265ad2kuh11dq9z$")));
 
             $req = $req->fetch();
 

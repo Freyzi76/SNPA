@@ -51,7 +51,7 @@
                         $new_pass = rand();
  
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
-                        $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
+                        $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$MEGAsecretKEY765325dqz6d2d265ad2kuh11dq9z$");
 
                         var_dump($new_pass_crypt);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");

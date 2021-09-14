@@ -83,7 +83,7 @@
             // Si toutes les conditions sont remplies alors on fait le traitement
             if($valid){
  
-                $mdp = crypt($mdp, "$6$rounds=5000$confirmationhbibicheiuheichoiehcoheihciehcoehchik$");
+                $mdp = crypt($mdp, "$6$rounds=5000$MEGAsecretKEY765325dqz6d2d265ad2kuh11dq9z$");
                 $date_creation_compte = date('Y-m-d H:i:s');
  
                 // On insert nos données dans la table utilisateur
