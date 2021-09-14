@@ -6,6 +6,6 @@ error_reporting( E_ALL );
 
 
 echo 'test1';
-$output = shell_exec('ls -lart');
+$output = shell_exec('ls');
 echo "<pre>$output</pre>";
 ?>
