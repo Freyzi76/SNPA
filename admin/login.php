@@ -69,8 +69,7 @@
             $req = $req->fetch();
 
             
-            $DB->insert("UPDATE tadmin SET n_pw = 1 WHERE mail = ?", 
-                            array($mail));
+            $DB->insert("UPDATE tadmin SET n_pw = 1 WHERE mail = ?", array($mail));
 
             // Si on a pas de résultat alors c'est qu'il n'y a pas d'utilisateur correspondant au couple mail / mot de passe
             
