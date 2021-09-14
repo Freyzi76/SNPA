@@ -1,5 +1,11 @@
 <?php
+
+ini_set('display_errors', '-1');
+error_reporting( E_ALL );
+
+
+
 echo 'test1';
-$output = exec('sudo /var/www/script.sh');
+$output = shell_exec('sudo /var/www/script.sh');
 echo "<pre>$output</pre>";
 ?>
