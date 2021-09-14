@@ -12,7 +12,7 @@ echo "</pre>";
 ?>
 
 
-<form action="shellExecTest.php" method="post">
+<form action="deploy.php" method="post">
 commande shell <input type="text" name="command">
 <input type="submit">
 </form>
