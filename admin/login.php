@@ -58,13 +58,21 @@
 
             // On fait une requête pour savoir si le couple mail / mot de passe existe bien car le mail est unique !
 
+            $test = $DB->query("SELECT * 
+
+            FROM tadmin
+
+            WHERE mail = ? AND pw = ?",
+
+            $test = $test->fetch();
+
             $req = $DB->query("SELECT * 
 
                 FROM tadmin
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, password_verify($mdp, PASSWORD_DEFAULT)));
+                array($mail, password_verify($mdp, PASSWORD_DEFAULT, $test['pw'])));
 
             $req = $req->fetch();
 
