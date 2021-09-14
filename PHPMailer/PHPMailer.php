@@ -94,6 +94,12 @@
                             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
                             
                            // header('Location: ../admin/index.php');
+
+                           if(!$mail->send()){
+                            echo "Mailer Error: " . $mail->ErrorInfo;
+                        }else{
+                            echo "Message sent!";
+                        }
                             exit;
 
                     }   
