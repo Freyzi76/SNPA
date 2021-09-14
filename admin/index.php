@@ -10,7 +10,7 @@
 
   // Fichier PHP contenant la connexion à votre BDD
 
-  include('../bd/connexionDB.php'); 
+  require('../bd/connexionDB.php'); 
 
 ?>
 
@@ -34,7 +34,7 @@
 
   <body>
 
-    <h1>Admin panel</h1>
+    <?= require('../bd/connexionDB.php'); ?>
 
     <?php
 
