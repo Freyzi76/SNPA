@@ -1,7 +1,7 @@
 
 <div class="text-center">
     
-    <div class="form-signin">
+    <main class="form-signin">
 
         <form method="post" class="container-fluid formcontainer">
 
@@ -52,7 +52,7 @@
 
         </form>
 
-    </div>
+        </main>
 
 </div>
 
