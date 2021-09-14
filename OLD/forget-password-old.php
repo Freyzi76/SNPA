@@ -49,7 +49,7 @@
                         $new_pass = "defaultPassword";
  
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
-                        $new_pass_crypt = password_hash($new_pass, PASSWORD_DEFAULT);
+                        $new_pass_crypt = password_hash($new_pass, PASSWORD_ARGON2I);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
                         
                         $from = "contact@hugo.marc.xyz";

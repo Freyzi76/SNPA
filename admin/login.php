@@ -64,7 +64,7 @@
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, password_hash($mdp, PASSWORD_DEFAULT)));
+                array($mail, password_hash($mdp, PASSWORD_ARGON2I)));
 
             $req = $req->fetch();
 
