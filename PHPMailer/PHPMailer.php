@@ -32,8 +32,6 @@
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
             $smtpPassword = trim($smtpPassword);
 
-
-            var_dump($smtpPassword);
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
@@ -46,9 +44,6 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
-                var_dump($verification_mail);
-
-                echo 'test';
  
                 if(isset($verification_mail['mail'])){
 
@@ -58,43 +53,28 @@
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = "defaultPassword";
  
-                        echo 'test2';
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = password_hash($new_pass, PASSWORD_DEFAULT);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
-                        
-                        $from = "contact@hugo.marc.xyz";
-                        $objet = 'Nouveau mot de passe';
-                        $to = $verification_mail['mail'];
- 
-                        echo 'test3';
 
-                        //===== Création du header du mail.
-                        $header = 'From: "Hugo-marc.xyz" <no-reply@test.com> \n';
-                        $header .= "Reply-To: ". $to ."\r\n";
-                        $header .= "MIME-version: 1.0\n";
-                        $header .= "Content-type: text/html; charset=utf-8\n";
-                        $header .= "Content-Transfer-Encoding: 8bit";
+
  
                         //===== Contenu de votre message
                         $contenu =  "<html>".
                             "<body>".
-                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$verification_mail['lastname']."</b>,</p><br/>".
+                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme". $verification_mail['lastname'] ."</b>,</p><br/>".
                             "<p style='text-align: justify'><i><b>Nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         
 
-                        echo 'test4';
-
 
                             $smtpUsername = 'hmarc@normandiewebschool.fr';
                             
-                            $emailFrom ='hmarc@normandiewebschool.fr';
+                            $emailFrom ='contact@hugo-marc.xyz';
                             $emailFromName = 'Hugo MARC';
                             
-                            $emailTo = 'hugo.marc76113@gmail.com';
                             $emailToName = 'TEST test';
                             
                             
@@ -110,10 +90,10 @@
                             $mail->Password = $smtpPassword;
                             
                             
-                            $mail->setFrom($emailFrom, $emailFromName);
-                            $mail->addAddress($emailTo, $emailToName);
-                            $mail->Subject = 'PHPMailer GMail SMTP';
-                            $mail->msgHTML("Hey Nicolas, voila PHPMailer ajouter sans composer les cours php POO ça aide"); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
+                            $mail->setFrom($emailFrom, $verification_mail['lastname'] . $verification_mail['firstname']);
+                            $mail->addAddress($verification_mail['mail'], $emailToName);
+                            $mail->Subject = 'Nouveau Mot de passe';
+                            $mail->msgHTML($contenu); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
                             $mail->AltBody = 'HTML messaging not supported';
                             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
                             
