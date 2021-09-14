@@ -1,9 +1,9 @@
 
 <div class="text-center">
     
-    <div class="form-signin" style="width: 300px;">
+    <div class="form-signin">
 
-        <form method="post" class="container-fluid formcontainer">
+        <form method="post" class="container-fluid formcontainer" style="width: 300px;">
 
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
