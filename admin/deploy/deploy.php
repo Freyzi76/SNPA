@@ -13,6 +13,7 @@ shell_exec('sh /home/hugo76113/script.sh');
 
 shell_exec('sh /home/hugo76113/script.sh > /home/scripts/log.txt &');
 
+echo "hey";
 
 ?>
 
