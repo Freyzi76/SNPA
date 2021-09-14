@@ -1,17 +1,17 @@
+
+<form action="shellExecTest.php" method="post">
+commande shell <input type="text" name="command">
+<input type="submit">
+</form>
+
 <?php
 
 ini_set('display_errors', '-1');
 error_reporting( E_ALL );
 
+$command = $_POST['command'];
+echo "<pre>";
+echo shell_exec($command);
+echo "</pre>";
 
-
-echo 'test1';
-$output = shell_exec('cd /home/hugo76113');
-echo "<pre>$output</pre>";
-$output = shell_exec('ls');
-echo "<pre>$output</pre>";
-
-/*
-$output = shell_exec('sudo script.sh');
-echo "<pre>$output</pre>";*/
 ?>
