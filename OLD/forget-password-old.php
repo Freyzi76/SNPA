@@ -16,12 +16,7 @@
         exit;
     }
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-
-    require 'src/Exception.php';
-    require 'src/PHPMailer.php';
-    require 'src/SMTP.php';
+    require ('../PHPMailer/PHPMailer.php');
 
  
     if(!empty($_POST)){
@@ -30,10 +25,10 @@
  
         if (isset($_POST['forgotPassword'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
-            $smtpPassword = trim($smtpPassword);
+            $smtpPassword = trim($MDP);
 
 
-            var_dump($smtpPassword);
+            var_dump($MDP);
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
@@ -46,19 +41,13 @@
                     array($mail));
                 $verification_mail = $verification_mail->fetch();
 
-                var_dump($verification_mail);
 
-                echo 'test';
  
                 if(isset($verification_mail['mail'])){
-
-                    $verification_mail['n_pw'] = 0;
-
                     if($verification_mail['n_pw'] == 0){
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = "defaultPassword";
  
-                        echo 'test2';
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = password_hash($new_pass, PASSWORD_DEFAULT);
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
@@ -67,8 +56,6 @@
                         $objet = 'Nouveau mot de passe';
                         $to = $verification_mail['mail'];
  
-                        echo 'test3';
-
                         //===== Création du header du mail.
                         $header = 'From: "Hugo-marc.xyz" <no-reply@test.com> \n';
                         $header .= "Reply-To: ". $to ."\r\n";
@@ -84,9 +71,11 @@
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
-                        
+                        mail($from, $to, $objet, $contenu, $header);
+                        $DB->insert("UPDATE tadmin SET pw = ?, n_pw = 1 WHERE mail = ?", 
+                            array($new_pass_crypt, $verification_mail['mail']));
 
-                        echo 'test4';
+
 
 
                             $smtpUsername = 'hmarc@normandiewebschool.fr';
@@ -138,3 +127,46 @@
     }
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Mot de passe oublié</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../Admin/css/style.css">
+
+        
+    </head>
+    <body>
+        <div>Mot de passe oublié</div>
+        <form method="post">
+            <?php
+                if (isset($er_mail)){
+            ?>
+                <div><?= $er_mail ?></div>
+            <?php   
+                }
+            ?>
+
+            <div class="mb-3"> 
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+            </div>
+
+            <div class="mb-3"> 
+                <label class="form-label">MDP</label>
+                <input class="form-control" type="password" placeholder="MDP" name="DMP" value="" required>
+            </div>
+            
+            <button class="btn btn-primary btn-formulaire-add" type="submit" name="forgotPassword">Envoyer</button>
+        </form>
+    </body>
+</html>
