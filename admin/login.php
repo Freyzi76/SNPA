@@ -54,7 +54,7 @@
 
             }
 
-            var_dump(password_hash($mdp, PASSWORD_ARGON2I));
+            var_dump(password_hash($mdp, PASSWORD_DEFAULT));
 
             // On fait une requête pour savoir si le couple mail / mot de passe existe bien car le mail est unique !
 
@@ -64,7 +64,7 @@
 
                 WHERE mail = ? AND pw = ?",
 
-                array($mail, password_verify($mdp, PASSWORD_ARGON2I)));
+                array($mail, password_verify($mdp, PASSWORD_DEFAULT)));
 
             $req = $req->fetch();
 
