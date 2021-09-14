@@ -71,7 +71,7 @@
                         //===== Envoi du mail
                         
 
-                            $smtpUsername = 'hmarc@normandiewebschool.fr';
+                            $smtpUsername = 'hugo.marc76113@gmail.com';
                             
                             $emailFrom ='contact@hugo-marc.xyz';
                             $emailFromName = 'Hugo MARC SNPA';
