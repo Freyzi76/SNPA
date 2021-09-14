@@ -64,7 +64,11 @@
 
             WHERE mail = ? AND pw = ?",
 
+            array($mail, $pw)));
+
             $test = $test->fetch();
+
+            var_dump($test);
 
             $req = $DB->query("SELECT * 
 
