@@ -9,6 +9,8 @@ error_reporting( E_ALL );
 
   require('../bd/connexionDB.php'); 
 
+  require('app/selectPages.php'); 
+
 ?>
 
 <html>
@@ -35,7 +37,7 @@ error_reporting( E_ALL );
 
     <main>
 
-    <?= require('pages/index.php'); ?>
+    <?= require('pages/' . $content . 'php'); ?>
 
     </main>
     
