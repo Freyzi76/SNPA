@@ -38,23 +38,7 @@
 
     <?php
 
-      if(!isset($_SESSION['id'])) { // Si on ne détecte pas de session alors on verra les liens ci-dessous
-
-    ?>
-
-    <div class="container-fluid ">
-
-      <a href="../admin/login.php" class="btn btn-primary">Connexion</a>
-
-      <a href="../admin/forget-password.php" class="btn btn-secondary">Mot de passe oublié</a>
-
-    </div>
-
-
-
-      <?php
-
-        }else { // Sinon s'il y a une session alors on verra les liens ci-dessous
+      if(!isset($_SESSION['id'])) {  
 
           if($_SESSION['SP'] == 1) {
 
@@ -68,29 +52,26 @@
            
 
 
-            <?php
-
+          <?php
 
           }
 
-      ?>
+          ?>
 
 
 
           <a href="add-item.php">Ajouter un produit</a>
 
-          <br>
           
-          <a href="deconnexion.php">Déconnexion</a>
 
 
  
 
-    <?php
+      <?php
         
       } 
 
-    ?>
+      ?>
 
   </body>
 
