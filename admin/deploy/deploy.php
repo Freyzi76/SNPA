@@ -6,6 +6,6 @@ error_reporting( E_ALL );
 
 
 echo 'test1';
-$output = shell_exec('sudo /var/www/script.sh');
+$output = shell_exec('sudo /home/hugo76113/script.sh');
 echo "<pre>$output</pre>";
 ?>
