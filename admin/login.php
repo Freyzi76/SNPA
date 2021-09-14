@@ -64,7 +64,7 @@
 
             WHERE mail = ? AND pw = ?",
 
-            array($mail, $pw)));
+            array($mail, $pw));
 
             $test = $test->fetch();
 
