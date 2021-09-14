@@ -6,6 +6,7 @@ error_reporting( E_ALL );
 
 
 echo 'test1';
-$output = shell_exec('sudo /home/hugo76113/script.sh');
+$output = shell_exec('sudo cd /var/www/');
+$output. = shell_exec('sudo rm -r SNPA');
 echo "<pre>$output</pre>";
 ?>
