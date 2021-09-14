@@ -62,7 +62,7 @@
                         //===== Contenu de votre message
                         $contenu =  "<html>".
                             "<body>".
-                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme". $verification_mail['lastname'] ."</b>,</p><br/>".
+                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme ". $verification_mail['lastname'] ."</b>,</p><br/>".
                             "<p style='text-align: justify'><i><b>Nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
@@ -73,7 +73,7 @@
                             $smtpUsername = 'hmarc@normandiewebschool.fr';
                             
                             $emailFrom ='contact@hugo-marc.xyz';
-                            $emailFromName = 'Hugo MARC';
+                            $emailFromName = 'Hugo MARC SNPA';
                             
                             $mail = new PHPMailer;
                             $mail->isSMTP(); 
@@ -87,8 +87,8 @@
                             $mail->Password = $smtpPassword;
                             
                             
-                            $mail->setFrom($emailFrom, $verification_mail['lastname'] . $verification_mail['firstname']);
-                            $mail->addAddress($verification_mail['mail'], $emailToName);
+                            $mail->setFrom($emailFrom, $emailFromName);
+                            $mail->addAddress($verification_mail['mail'], $verification_mail['lastname'] . ' ' . $verification_mail['firstname']);
                             $mail->Subject = 'Nouveau Mot de passe';
                             $mail->msgHTML($contenu); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
                             $mail->AltBody = 'HTML messaging not supported';
