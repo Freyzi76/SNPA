@@ -35,8 +35,6 @@
 
     <?php require('templates/Header.php'); ?>
 
-    <?php require('templates/headerNew.php'); ?>
-
     <main>
 
       <br>
