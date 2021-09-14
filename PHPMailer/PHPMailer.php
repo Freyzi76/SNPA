@@ -75,9 +75,6 @@
                             $emailFrom ='contact@hugo-marc.xyz';
                             $emailFromName = 'Hugo MARC';
                             
-                            $emailToName = 'TEST test';
-                            
-                            
                             $mail = new PHPMailer;
                             $mail->isSMTP(); 
                             $mail->SMTPDebug = 2; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
