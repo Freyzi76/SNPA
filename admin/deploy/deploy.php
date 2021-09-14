@@ -11,7 +11,6 @@ echo "</pre>";
 
 shell_exec('sh script.sh');
 
-echo "hey";
 
 ?>
 
