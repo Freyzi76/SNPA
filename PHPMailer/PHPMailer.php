@@ -1,15 +1,13 @@
 <?php
-    session_start();
-    require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
     
     if (isset($_SESSION['id'])){
-        header('Location: index.php'); 
+        header('Location: ../admin?page=home'); 
         exit;
     }
 
     if (isset($_SESSION['SP'])){
-        header('Location: index.php'); 
+        header('Location: ../admin?page=home'); 
         exit;
     }
 
@@ -25,7 +23,7 @@
         extract($_POST);
         $valid = true;
  
-        if (isset($_POST['forgotPassword'])){
+        if (isset($_POST['forgetPassword'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
             $smtpPassword = trim($smtpPassword);
 
@@ -93,18 +91,20 @@
                             $mail->AltBody = 'HTML messaging not supported';
                             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
                             
-                           // header('Location: ../admin/index.php');
+                            
 
                            if(!$mail->send()){
                             echo "Mailer Error: " . $mail->ErrorInfo;
                         }else{
                             echo "Message sent!";
                         }
-                            exit;
+
+                        header('Location: ../admin?page=home');
+                        exit;
 
                     }   
                 }       
-                header('Location: ../admin/index.php');
+                header('Location: ../admin?page=home');
                 exit;
             }
         }
