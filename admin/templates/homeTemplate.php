@@ -18,7 +18,7 @@
 
             ?>
 
-            <a class="nav-link active" aria-current="page" href="admin?page=home&option=addAdmin">Ajouter un Administrateur</a>
+            <a class="nav-link active" aria-current="page" href="http://hugo-marc.xyz/admin?page=home&option=addAdmin">Ajouter un Administrateur</a>
 
             <br>
 
