@@ -8,7 +8,6 @@
 
             <h1 class="h3 mb-3 fw-normal">Mot de passe</h1>
 
-            <br>
 
             <h1 class="h3 mb-3 fw-normal">oublier</h1>
 
