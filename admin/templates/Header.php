@@ -49,7 +49,7 @@
                     ?>
 
                         <div class="text-end">
-                            <a href="deconnexion.php" class="btn btn-danger">Déconnexion</a>
+                            <a href="pages/logOut.php" class="btn btn-danger">Déconnexion</a>
                         </div>
 
                     <?php
