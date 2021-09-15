@@ -90,14 +90,7 @@
                             $mail->msgHTML($contenu); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
                             $mail->AltBody = 'HTML messaging not supported';
                             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
-                            
-                            
-
-                           if(!$mail->send()){
-                            echo "Mailer Error: " . $mail->ErrorInfo;
-                        }else{
-                            echo "Message sent!";
-                        }
+                          
 
                         header('Location: ../admin?page=home');
                         exit;
