@@ -4,17 +4,17 @@
 
     
     if (!isset($_SESSION['id'])){
-        header('Location: index.php'); 
+        header('Location: ../admin?page=home'); 
         exit;
     }
 
     if (!isset($_SESSION['SP'])){
-        header('Location: index.php'); 
+        header('Location: ../admin?page=home'); 
         exit;
     }
 
     if ($_SESSION['SP'] != 1){
-        header('Location: index.php'); 
+        header('Location: ../admin?page=home'); 
         exit;
     }
  
@@ -91,7 +91,7 @@
                     (?, ?, ?, ?, ?, ?)", 
                     array($prenom, $nom, $mail, $mdp, $date_creation_compte,  $adminselect));
  
-                header('Location: ../admin/index.php');
+                header('Location: ../admin?page=home');
                 exit;
             }
         }
