@@ -65,6 +65,8 @@
             <div class="chartjs-size-monitor-expand">
                 
                 <div class="">
+
+                <?php require('options/' . $option . '.php'); ?>
                     
                 </div>
 
@@ -73,6 +75,8 @@
             <div class="chartjs-size-monitor-shrink">
 
                 <div class="">
+
+                <?php require('options/' . $option . '.php'); ?>
 
                 </div>
 
@@ -86,6 +90,8 @@
 
 
         </div>
+
+        
 
 
     </main>
