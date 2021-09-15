@@ -81,16 +81,6 @@
 
             </div>
 
-            <div class="chartjs-size-monitor-shrink">
-
-                <div class="">
-
-                <?php require('options/' . $option . '.php'); ?>
-
-                </div>
-
-            </div>
-
         </div>
         
 
