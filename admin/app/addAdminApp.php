@@ -1,6 +1,4 @@
 <?php
-    session_start();
-    require('../bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
 
     
     if (!isset($_SESSION['id'])){
