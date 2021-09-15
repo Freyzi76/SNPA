@@ -43,7 +43,7 @@
                     ?>
 
                         <div class="text-end">
-                            <a href="../admin?page=logOut.php" class="btn btn-danger">Déconnexion</a>
+                            <a href="../admin?page=logOut" class="btn btn-danger">Déconnexion</a>
                         </div>
 
                     <?php
