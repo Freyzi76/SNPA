@@ -66,7 +66,7 @@
                 
                 <div class="">
 
-                <?php require('options/' . $option . '.php'); ?>
+                <?php require('../options/' . $option . '.php'); ?>
                     
                 </div>
 
@@ -76,7 +76,7 @@
 
                 <div class="">
 
-                <?php require('options/' . $option . '.php'); ?>
+                <?php require('../options/' . $option . '.php'); ?>
 
                 </div>
 
