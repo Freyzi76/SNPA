@@ -22,7 +22,7 @@
 
             <br>
 
-            <a class="nav-link active" aria-current="page" href="manage-admin.php">Gerez Les Administrateur</a>
+            <a class="nav-link active" aria-current="page" href="http://hugo-marc.xyz/admin?page=home&option=manageAdmin">Gerez Les Administrateur</a>
 
             <br>
 
