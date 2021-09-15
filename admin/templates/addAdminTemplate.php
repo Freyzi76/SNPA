@@ -68,7 +68,7 @@
 
                 <div class="form-floating">
 
-                    <select class="form-control" name="adminselect" required>
+                    <select id="adminselect" class="form-control" name="adminselect" required>
 
                         <option value="" disabled >Select Admin</option>
 
@@ -77,6 +77,8 @@
                         <option value="1">Super-Admin</option>
                                 
                     </select>
+
+                    <label for="adminselect">Select un grade</label>
 
                 </div> 
 
