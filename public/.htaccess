@@ -1,0 +1,7 @@
+
+<files .htaccess>
+order allow,deny
+deny from all
+</files> 
+
+DirectoryIndex index.php

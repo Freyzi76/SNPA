@@ -11,6 +11,3 @@ Deny from  all
 order allow,deny
 deny from all
 </files> 
-
-
-RedirectMatch 403 ^/.git/?$

@@ -26,6 +26,8 @@ error_reporting( E_ALL );
 
     <link rel="stylesheet" href="../Admin/css/style.css">
 
+    <link rel="stylesheet" href="css/all.css">
+
     <title>Admin</title>
 
 
