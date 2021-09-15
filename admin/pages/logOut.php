@@ -2,7 +2,7 @@
 
   session_destroy();
 
-  header('location: ?page=home'); // la page sur lequel l'utilisateur sera redirigé.
+  header('location: http://hugo-marc.xyz/admin?page=home'); // la page sur lequel l'utilisateur sera redirigé.
 
   exit;
 
