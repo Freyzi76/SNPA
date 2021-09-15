@@ -89,7 +89,7 @@
                     (?, ?, ?, ?, ?, ?)", 
                     array($prenom, $nom, $mail, $mdp, $date_creation_compte,  $adminselect));
  
-                header('Location: ../admin?page=home');
+                header('Location: ../admin?page=home&option=');
                 exit;
             }
         }
