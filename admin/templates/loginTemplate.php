@@ -5,22 +5,14 @@
 
         <form method="post" class="container-fluid formcontainer" style="width: 300px;">
 
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal">Connexion</h1>
 
-            <?php
-            if (isset($er_mail)){
-            ?>
-
-                <div><?= $er_mail ?></div>
-
-            <?php   
-            }
-            ?>
+          
                 <br>
 
                 <div class="form-floating">
                     
-                    <input class="form-control" type="email" id="Email" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+                    <input class="form-control" type="email" id="Email" name="mail" value="" required>
 
                     <label for="Email">Email</label>
                 
@@ -29,20 +21,11 @@
                 <br>
 
 
-            <?php
-            if (isset($er_mdp)){
-            ?>
-
-                <div><?= $er_mdp ?></div>
-
-
-            <?php   
-            }
-            ?>
+            
 
                 <div class="form-floating"> 
                     
-                    <input class="form-control" type="password" id="Password" name="mdp" value="<?php if(isset($mdp)){ echo $mdp; }?>" required>
+                    <input class="form-control" type="password" id="Password" name="mdp" value="" required>
 
                     <label for="Password">Mot de Passe</label>
 
