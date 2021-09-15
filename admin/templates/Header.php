@@ -18,7 +18,7 @@
 
                             <li class="nav-item">
 
-                                <a class="nav-link disabled"><?php echo $_SESSION['lastname'];?> </a>
+                                <a class="nav-link disabled"><?php// echo $_SESSION['lastname'];?> </a>
 
                             </li>
 
