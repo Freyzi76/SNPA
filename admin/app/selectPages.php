@@ -2,7 +2,7 @@
 
 if (isset($_GET['page'])) {
 
-$content = htmlentities(strtolower(trim($_GET['page'])));
+$content = htmlentities(trim($_GET['page']));
 
 } else {
 
