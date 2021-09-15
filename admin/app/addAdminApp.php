@@ -24,7 +24,7 @@
         $valid = true;
  
         // On se place sur le bon formulaire grâce au "name" de la balise "input"
-        if (isset($_POST['inscription'])){
+        if (isset($_POST['addadmin'])){
             $nom  = htmlentities(trim($nom)); // On récupère le nom
             $prenom = htmlentities(trim($prenom)); // on récupère le prénom
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail

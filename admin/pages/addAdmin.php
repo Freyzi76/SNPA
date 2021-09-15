@@ -1,6 +1,6 @@
 <?php
 
-require ('app/addAdmin');
+require ('app/addAdminApp.php');
 
 require ('templates/addAdminTemplate.php');
 

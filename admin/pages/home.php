@@ -1,36 +1,8 @@
 <?php
 
-    if(isset($_SESSION['id'])) {  
+//require('app/loginApp.php');
 
-        if($_SESSION['SP'] == 1) {
+require('templates/homeTemplate.php');
+
 
 ?>
-
-            <a href="add-admin.php">Ajouter un Administrateur</a>
-            <br>
-            <a href="manage-admin.php">Gerez Les Administrateur</a>
-            <br>
-
-           
-
-
-        <?php
-
-        }
-
-        ?>
-
-
-
-        <a href="add-item.php">Ajouter un produit</a>
-
-          
-
-
- 
-
-    <?php
-            
-    } 
-
-    ?>
