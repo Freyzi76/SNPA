@@ -101,7 +101,7 @@
 
  
 
-                header('Location:  ../admin/index.php');
+                header('Location:  ../admin?page=home');
 
                 exit;
 
