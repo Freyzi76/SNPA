@@ -28,7 +28,7 @@
 
             <td><?php if($aa['SP'] == 0){echo 'NON';}elseif($aa['SP'] == 1){echo 'OUI';}?></td>
 
-            <td><a href="../admin/modify-admin.php?id=<?= $aa['id'] ?>">Modifier cet Administrateur</a></td>
+            <td><a href="http://hugo-marc.xyz/admin/?page=home&option=manageAdmin&maId=<?= $aa['id'] ?>">Modifier cet Administrateur</a></td>
 
           </tr>
 
