@@ -10,7 +10,7 @@ class Autoload {
     static function autoloader($class) 
     {
         $class = str_replace('HM\\', '', $class);
-        $class = str_replace('\\', '', $class);
+        //$class = str_replace('\\', '', $class);
         require 'app/' . $class . '.php';
     }
 
