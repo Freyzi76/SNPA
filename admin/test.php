@@ -3,10 +3,25 @@
 ini_set('display_errors', '-1');
 error_reporting( E_ALL );
 
+session_start(); 
+
+// Fichier PHP contenant la connexion à votre BDD
+
+require('../bd/connexionDB.php'); 
+
+
 require 'app/Form.php';
 
 
 $form = new Form;
+
+
+
+$afficher_admin = $DB->query("SELECT * 
+FROM tadmin 
+WHERE id = ?",
+array($_GET['maId']));
+$afficher_admin = $afficher_admin->fetch();
 
 ?>
 
