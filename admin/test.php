@@ -10,7 +10,7 @@ session_start();
 require('../bd/connexionDB.php'); 
 
 
-require 'app/Form.php';
+require '../class/Form.php';
 
 
 $form = new Form;
