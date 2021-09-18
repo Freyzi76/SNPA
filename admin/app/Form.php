@@ -1,9 +1,5 @@
 <?php
 
-namespace HM\app;
-
-
-
 class Form{
 
     protected $data;
