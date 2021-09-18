@@ -12,8 +12,7 @@ session_start();
 
 require '../class/Form.php';
 
-
-
+require '../class/insert.php';
 
 
 ?>
@@ -49,7 +48,7 @@ echo $form->input('mail', 'Email', 'text', $afficher_admin);
 echo $form->input('password', 'Mot De Passe', 'password', $afficher_admin);
 echo $form->submit();
 
-$newAdd->verifyInfo($lastname, $name, $mail, $password, $confpassword, $adminselect, $adminActive);
+
 
 ?>
 

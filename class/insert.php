@@ -6,7 +6,9 @@ require('../bd/connexionDB.php');
 
 class addUser {
 
-    protected function verifyInfo($lastname, $name, $mail, $password, $confpassword, $adminselect, $adminActive) {    
+    protected function verifyInfo($lastname, $name, $mail, $password, $confpassword, $adminselect, $adminActive) { 
+        
+        extract($_POST);
         
             $lastname  = htmlentities(trim($lastname)); // On récupère le nom
             $name = htmlentities(trim($name)); // on récupère le prénom
