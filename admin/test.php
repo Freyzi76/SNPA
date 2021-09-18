@@ -47,7 +47,7 @@ $afficher_admin = $afficher_admin->fetch();
 <button class="btn btn-warning " onclick="location.href='/admin';">ADMIN</button>
 
 
-<form action="#" method="post">
+<form method="post" action="$addUser->verifyInfo()">
 
 <?php 
 
@@ -57,6 +57,8 @@ echo $form->input('mail', 'Email', 'text', $afficher_admin);
 echo $form->input('password', 'Mot De Passe', 'password', $afficher_admin);
 echo $form->input('confpassword', 'Confirmer le Mot De Passe', 'confpassword', $afficher_admin);
 echo $form->submit();
+
+
 
 
 ?>
