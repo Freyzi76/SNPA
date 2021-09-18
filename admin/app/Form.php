@@ -12,7 +12,7 @@ class Form{
     }
 
     protected function surround($html){
-        return "<div class=\"form-group\">$html</div><br>";
+        return "<div class=\"form-floating\">$html</div><br>";
 
 
     }
@@ -22,10 +22,16 @@ class Form{
     }
 
 
-    public function input($name){
+    public function input($name_var, $name, $type){
       return $this->surround(
 
-          '<input class="form-control" type="text" name="' . $name . '" value=" ' . $this->getvalue($name) . '">'
+          '
+
+          <input type="' . $type . '" class="form-control" id="' . $name_var . '" name="' . $name_var . '" value="<?php if(isset(' . $name_var . ')){ echo ' . $name_var . '; }?>" required>
+
+          <label for="' . $name_var . '">' . $name . '</label>
+
+          '
         
         );
     }
