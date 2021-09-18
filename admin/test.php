@@ -12,6 +12,8 @@ session_start();
 
 require '../class/Form.php';
 
+$form = new Form;
+
 require '../class/insert.php';
 
 

@@ -55,5 +55,3 @@ class Form {
 
 
 }
-
-$form = new Form;
