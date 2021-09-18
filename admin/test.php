@@ -51,7 +51,7 @@ $afficher_admin = $afficher_admin->fetch();
 <?php 
 
 echo $form->input('firstname', 'Prénom', 'text', $afficher_admin);
-echo $form->input('password', 'Mot De Passe', 'password');
+echo $form->input('password', 'Mot De Passe', 'password', $afficher_admin);
 echo $form->submit();
 
 ?>
