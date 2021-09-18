@@ -12,7 +12,7 @@ require 'class/Autoloader.php';
 Autoload::register();
 
 
-$form = new Form($_POST);
+$form = new Form;
 
 ?>
 
