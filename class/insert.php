@@ -103,11 +103,11 @@ class addUser {
 
                 if($adminActive == true) {
 
-                    insertAdmin($name, $Lastname, $mail, $password, $create_date, $adminselect)
+                    insertAdmin($name, $Lastname, $mail, $password, $create_date, $adminselect);
 
                 } else {
 
-                    insertUser($name, $Lastname, $mail, $password, $create_date)
+                    insertUser($name, $Lastname, $mail, $password, $create_date);
 
                 }
 
