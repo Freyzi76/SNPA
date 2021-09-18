@@ -27,7 +27,7 @@ class Form{
 
           '
 
-          <input type="' . $type . '" class="form-control" id="' . $name_var . '" name="' . $name_var . '" value="' if(isset( . $name_var . )){ echo  . $name_var . ;'" required>
+          <input type="' . $type . '" class="form-control" id="' . $name_var . '" name="' . $name_var . '" value="' if(isset($name_var)){ echo  $name_var;'" required>
 
           <label for="' . $name_var . '">' . $name . '</label>
 
