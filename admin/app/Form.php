@@ -28,7 +28,11 @@ class Form{
             
             $result = $afficher_admin[$name_var];
 
-        } 
+        } else {
+
+            $result = '';
+
+        }
 
       return $this->surround(
 
