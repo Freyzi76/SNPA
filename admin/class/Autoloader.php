@@ -11,7 +11,7 @@ class Autoload {
     {
         $class = str_replace('Hugo\\', '', $class);
         $class = str_replace('\\', '', $class);
-        require 'class/' . $class . '.php';
+        require 'app/' . $class . '.php';
     }
 
 
