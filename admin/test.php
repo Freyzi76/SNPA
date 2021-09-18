@@ -3,6 +3,10 @@
 ini_set('display_errors', '-1');
 error_reporting( E_ALL );
 
+use HM\app\Form;
+
+use \HM\class\Autoload;
+
 require 'class/Autoloader.php';
 
 Autoload::register();
