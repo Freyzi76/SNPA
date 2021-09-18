@@ -1,6 +1,6 @@
 <?php
 
-class Form{
+class Form {
 
     protected $data;
 
@@ -55,3 +55,5 @@ class Form{
 
 
 }
+
+$form = new Form;

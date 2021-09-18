@@ -7,21 +7,14 @@ session_start();
 
 // Fichier PHP contenant la connexion à votre BDD
 
-require('../bd/connexionDB.php'); 
+//require('../bd/connexionDB.php'); 
 
 
 require '../class/Form.php';
 
 
-$form = new Form;
 
 
-
-$afficher_admin = $DB->query("SELECT * 
-FROM tadmin 
-WHERE id = ?",
-array($_GET['maId']));
-$afficher_admin = $afficher_admin->fetch();
 
 ?>
 
@@ -55,6 +48,8 @@ echo $form->input('lastname', 'Nom', 'text', $afficher_admin);
 echo $form->input('mail', 'Email', 'text', $afficher_admin);
 echo $form->input('password', 'Mot De Passe', 'password', $afficher_admin);
 echo $form->submit();
+
+$newAdd->verifyInfo($lastname, $name, $mail, $password, $confpassword, $adminselect, $adminActive);
 
 ?>
 
