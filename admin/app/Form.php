@@ -26,7 +26,7 @@ class Form{
 
         if(isset($afficher_admin[$name_var])) { 
             
-            $result = $afficher_admin[$name_var]
+            $result = $afficher_admin[$name_var];
 
         } 
 
