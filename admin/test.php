@@ -55,8 +55,8 @@ echo $form->input('firstname', 'Prénom', 'text', $afficher_admin);
 echo $form->input('lastname', 'Nom', 'text', $afficher_admin);
 echo $form->input('mail', 'Email', 'text', $afficher_admin);
 echo $form->input('password', 'Mot De Passe', 'password', $afficher_admin);
+echo $form->input('confpassword', 'Confirmer le Mot De Passe', 'confpassword', $afficher_admin);
 echo $form->submit();
-
 
 
 ?>
