@@ -10,7 +10,6 @@ $form = new BootstrapForm($_POST);
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,9 +24,7 @@ $form = new BootstrapForm($_POST);
 </head>
 <body>
 
-<p> je me mets a jour avec un script depuis putty mon proprio est heureux :)<p>
-
-<button class="btn btn-warning " onclick="location.href='/admin';">ADMIN</button>
+<p> hello word <p>
 
 
 <form action="#" method="post">
@@ -42,8 +39,8 @@ echo $form->submit();
 
 
 </form>
-  
+
+
+
 </body>
 </html>
-
-
