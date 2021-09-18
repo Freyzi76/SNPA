@@ -12,7 +12,7 @@ class Form {
     }
 
     protected function surround($html){
-        return "<div class=\"form-floating\"  action=\"$newAdd->verifyInfo($lastname, $name, $mail, $password, $confpassword, $adminselect, $adminActive)\">$html</div><br>";
+        return "<div class=\"form-floating\"  action=\"\">$html</div><br>";
 
 
     }
