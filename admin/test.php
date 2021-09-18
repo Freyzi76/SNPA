@@ -50,7 +50,7 @@ $afficher_admin = $afficher_admin->fetch();
 
 <?php 
 
-echo $form->input('username', 'Prénom', 'text');
+echo $form->input('firstname', 'Prénom', 'text', $afficher_admin);
 echo $form->input('password', 'Mot De Passe', 'password');
 echo $form->submit();
 

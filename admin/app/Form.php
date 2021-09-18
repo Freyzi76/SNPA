@@ -22,12 +22,12 @@ class Form{
     }
 
 
-    public function input($name_var, $name, $type){
+    public function input($name_var, $name, $type, $afficher_admin){
       return $this->surround(
 
           '
 
-          <input type="' . $type . '" class="form-control" id="' . $name_var . '" name="' . $name_var . '" value="null" required>
+          <input type="' . $type . '" class="form-control" id="' . $name_var . '" name="' . $name_var . '" value="' if(isset($afficher_admin[$name_var])){ echo  $afficher_admin[$name_var]}'" required>
 
           <label for="' . $name_var . '">' . $name . '</label>
 
