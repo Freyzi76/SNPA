@@ -35,8 +35,8 @@ $form = new Form;
 
 <?php 
 
-echo $form->input('username');
-echo $form->input('password');
+echo $form->input('username', 'Prénom', 'text');
+echo $form->input('password', 'Mot De Passe', 'password');
 echo $form->submit();
 
 ?>
