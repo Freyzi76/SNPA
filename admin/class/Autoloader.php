@@ -1,5 +1,7 @@
 <?php
 
+namespace HM;
+
 class Autoload {
 
     static function register()
@@ -9,8 +11,8 @@ class Autoload {
 
     static function autoloader($class) 
     {
-        $class = str_replace('HM\\', '', $class);
-        //$class = str_replace('\\', '', $class);
+        $class = str_replace( __NAMESPACE__ . '\\', '', $class);
+        $class = str_replace('\\', '', $class);
         require 'app/' . $class . '.php';
     }
 
