@@ -17,6 +17,13 @@ $form = new Form;
 require '../class/insert.php';
 
 
+$afficher_admin = $DB->query("SELECT * 
+FROM tadmin 
+WHERE id = ?",
+array($_GET['maId']));
+$afficher_admin = $afficher_admin->fetch();
+
+
 ?>
 
 
