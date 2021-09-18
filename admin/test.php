@@ -1,3 +1,18 @@
+<?php
+
+ini_set('display_errors', '-1');
+error_reporting( E_ALL );
+
+require '../admin/class/Autoloader.php';
+
+Autoload::register();
+
+
+$form = new Form($_POST);
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,6 +33,18 @@
 <button class="btn btn-warning " onclick="location.href='/admin';">ADMIN</button>
 
 
+<form action="#" method="post">
+
+<?php 
+
+echo $form->input('username');
+echo $form->input('password');
+echo $form->submit();
+
+?>
+
+
+</form>
   
 </body>
 </html>
