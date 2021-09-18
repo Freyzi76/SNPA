@@ -1,6 +1,9 @@
 <?php
 
-require 'class/Autoloader.php';
+ini_set('display_errors', '-1');
+error_reporting( E_ALL );
+
+require '../admin/class/Autoloader.php';
 
 Autoload::register();
 
