@@ -5,7 +5,7 @@ require 'class/Autoloader.php';
 Autoload::register();
 
 
-$form = new BootstrapForm($_POST);
+$form = new Form($_POST);
 
 ?>
 
